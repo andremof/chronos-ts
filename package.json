@@ -1,0 +1,47 @@
+{
+  "name": "chronos-ts",
+  "version": "1.0.0",
+  "main": "index.js",
+  "description": "A powerful, lightweight TypeScript library for date manipulation",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "scripts": {
+    "build": "tsc",
+    "test": "jest",
+    "lint": "eslint . --ext .ts",
+    "format": "prettier --write \"src/**/*.ts\"",
+    "prepare": "npm run build",
+    "prepublishOnly": "npm test && npm run lint",
+    "version": "npm run format && git add -A src",
+    "postversion": "git push && git push --tags"
+  },
+  "keywords": [
+    "date",
+    "time",
+    "typescript",
+    "chronos",
+    "date-manipulation",
+    "datetime"
+  ],
+  "author": "Andre Martins",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/andremof/chronos-ts.git"
+  },
+  "bugs": {
+    "url": "https://github.com/andremof/chronos-ts/issues"
+  },
+  "homepage": "https://github.com/andremof/chronos-ts#readme",
+  "devDependencies": {
+    "@types/jest": "^29.5.14",
+    "@types/node": "^22.13.1",
+    "@typescript-eslint/eslint-plugin": "^8.23.0",
+    "@typescript-eslint/parser": "^8.23.0",
+    "eslint": "^9.19.0",
+    "jest": "^29.7.0",
+    "prettier": "^3.4.2",
+    "ts-jest": "^29.2.5",
+    "typescript": "^5.7.3"
+  }
+}
